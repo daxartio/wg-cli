@@ -1,5 +1,7 @@
 # Wiregurad CLI
 
+This package generates wg's client configuration file `<client_name>.conf`.
+
 ## Get started
 
 ### Help
@@ -27,7 +29,7 @@ wg0.conf
 ### Run
 
 ```
-wg_cli test 10.0.0.5/32
+python -m wg_cli test 10.0.0.5/32
 ```
 
 #### Created files
@@ -41,3 +43,5 @@ test.conf
 ```
 
 Will change the file `wg0.conf`
+
+Don't forget to apply config file `systemctl restart wg-quick@wg0`
